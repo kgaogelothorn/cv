@@ -17,611 +17,343 @@
       Kgaogelo Manganye | Front end web developer | Software developer
     </title>
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap"
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light"
       rel="stylesheet"
+      type="text/css"
     />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <style>
+      *,
+      *:before,
+      *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 100%;
+      }
+
       body {
-        margin: 0;
-        padding: 0
-      }
-      .main-cv {
-        background: #000000;
-        margin: auto;
-        width: 1024px
-      }
-      * {
-        font-family: 'Open Sans Condensed', sans-serif;
+        background: url('./noise.jpg');
+        font: 16px Helvetica, Sans-Serif;
+        line-height: 24px;
       }
 
-      [class*='entypo-']:before {
-        font-family: 'Open Sans Condensed', sans-serif;
+
+
+      .skill-set li:hover {
+        background: #3498db;
       }
 
-      /* fontawesome */
-      [class*='fontawesome-']:before {
-        font-family: 'FontAwesome', sans-serif;
+      h1 {
+        color: rgba(0, 0, 0, .75);
+        font-size: 1.7em;
+        font-family: serif;
+        font-weight: bold;
       }
 
-      /* Utils */
+      h2 {
 
-      .clear {
-        clear: both;
-      }
-
-      .purple {
-        color: rgb(216, 181, 216) !important;
-      }
-
-      .block {
-        margin: 25px 30px;
-      }
-
-      .main-cv h2 {
-        color: #9185c4;
-      }
-
-      .block h1 {
-        margin-left: -5px;
-        font-weight: 200;
-      }
-
-      .last.block {
-        margin-bottom: 110px;
-      }
-
-      .horizontal_list {
-        margin: 0;
         padding: 0;
-        list-style-type: none;
-      }
-
-      .horizontal_list li {
-        float: left;
-      }
-
-      .horizontal_list li:before {
-        content: none;
-      }
-
-      .horizontal_list li {
-        padding-left: 0;
-        text-indent: 0;
-      }
-
-      .horizontal_line {
-        margin: 34px 0 0 30px;
-        height: 26px;
         position: relative;
+        font-family: Open Sans, sans-serif;
+        font-size: 1.25em;
+        font-weight: bold;
       }
 
-      .line_left,
-      .line_right {
-        border-top: 1px solid #434247;
-        width: 305px;
-        margin-top: 13px;
-      }
-
-      .line_left {
-        float: left;
-      }
-
-      .line_right {
-        float: right;
-      }
-
-      .left_circle,
-      .central_circle,
-      .right_circle {
-        background: rgb(69, 68, 73);
-        background: rgba(255, 255, 255, 0.15);
-        position: absolute;
-        border-radius: 50px !important;
-      }
-
-      .left_circle,
-      .right_circle {
-        width: 13px;
-        height: 13px;
-        top: 7px;
-      }
-
-      .left_circle {
-        left: 314px;
-      }
-
-      .central_circle {
-        width: 26px;
-        height: 26px;
-        top: 0px;
-        left: 322px;
-      }
-
-      .right_circle {
-        left: 343px;
-      }
-
-      /* Main tags */
-
-      blockquote {
-        /* font-style: italic; */
-        margin: 25px 0;
-        padding-left: 20px;
-        border-left: 2px solid #fcc134;
-      }
-
-      .main-cv blockquote,
-      .main-cv p,
-      .main-cv a,
-      .main-cv li {
-        font-weight: 300;
-        font-size: 15px;
-        color: #e4e3e8;
-      }
-
-      a:focus {
-        outline: none;
-      }
-
-      .header_menu_container ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .header_menu_container li {
-        padding-left: 1em;
-        text-indent: -0.7em;
-      }
-
-      .header_menu_container li:before {
-        content: '•';
-        color: #837c9a;
-        font-size: 20px;
-        padding-right: 8px;
-      }
-
-      /* Containers size */
-
-      #main_container {
-        padding: 15px;
-        margin: 0 auto;
-      }
-
-      #header {
-        height: 130px;
-        border-bottom: 1px solid #fcc134;
-      }
-
-      .header_logotype_container {
-        width: 260px;
-        height: 130px;
-        border-right: 1px solid #403f44;
-        float: left;
-      }
-
-      .header_menu_container {
-        height: 130px;
-        width: 699px;
-        float: left;
-      }
-
-      #left_col {
-        width: 260px;
-        float: left;
-      }
-
-      #content_container {
-        width: 699px;
-        border-left: 1px solid #403f44;
-        float: left;
-      }
-
-      #footer {
-        width: 960px;
-        height: 60px;
-        border-top: 1px solid #403f44;
-        display: inline-block;
-      }
-
-      /* HEADER */
-
-      .logotype_name {
-        text-transform: uppercase;
-        font-size: 16px;
-        margin: 58px 5px 0;
-      }
-
-      .logotype_occupation {
-        text-transform: uppercase;
-        margin-top: 5px;
-        color: #5ce2af;
-        font-size: 14px;
-        letter-spacing: 2px;
-        padding-left: 7px;
-      }
-
-      .download_print_buttons {
-        width: 225px;
-        height: 45px;
-      }
-
-      .download_print_buttons a {
-        text-decoration: none;
-        font-size: 12px;
-        font-style: italic;
-        line-height: 45px;
-        padding: 16px 17px;
-        background: #353638;
-      }
-
-      .download_print_buttons a:hover {
-        background: #020609;
-      }
-
-      .download_print_buttons .icon {
-        color: #02070a;
-        padding-right: 6px;
-        font-style: normal;
-        font-size: 18px;
-      }
-
-      .icon-angle-double-right {
-        position: relative;
-        top: 2px;
-      }
-
-      .download_print_buttons a:hover .icon {
-        color: #e4e3e8;
-      }
-
-      .header_menu {
-        width: 699px;
-        margin-top: 40px;
-        margin-left: 5px;
-      }
-
-      .header_menu a {
-        text-decoration: none;
-        padding: 0 20px;
-        border-left: 1px solid #e4e3e8;
-        font-size: 16px;
-        font-weight: 400;
-      }
-
-      .header_menu a.no_border {
-        border-left: none;
-      }
-
-      .header_menu a:hover {
-        color: #837c9a;
-      }
-
-      /* LEFT NAV */
-
-      #left_nav h2 {
-        margin: 0;
-        font-size: 24px;
-      }
-
-      .profile_frame {
-        width: 230px;
-        height: 260px;
-        background: black;
-        border: 1px solid #403f44;
-        margin-top: 30px;
-      }
-
-      .profile_picture {
-        width: 210px;
-        height: 240px;
-        margin: 10px;
-      }
-
-      .hello_content,
-      .contact_details_content {
-        margin-top: 25px;
-      }
-
-      .hello_content {
-        width: 230px;
-      }
-
-      .contact_details_content h2 + p.purple {
-        margin-top: 10px;
-      }
-
-      .contact_details_content p {
-        margin: 0;
-      }
-
-      .contact_details_content p.purple {
-        margin-top: 25px;
-      }
-
-      .send_message_button,
-      .special_button {
-        margin-top: 25px;
+      h2 span {
+        bottom: 0;
         display: block;
-        background: #fcc134;
-        width: 230px;
-        height: 50px;
-        position: relative;
-        z-index: 1;
-      }
-
-      .cut1:after {
-        content: '';
-        position: absolute;
-        bottom: -19px;
-        left: -20px;
-        width: 30px;
-        height: 30px;
-        z-index: 9;
-        transform: rotate(45deg);
-      }
-
-      .cut2:before {
-        content: '';
-        position: absolute;
-        top: -19px;
-        right: -20px;
-        width: 30px;
-        height: 30px;
-        z-index: 9;
-        transform: rotate(45deg);
-      }
-
-      .content {
-        text-align: center;
-        color: #04080b;
-        width: 100%;
-        height: 40px;
-        position: absolute;
-        z-index: 2;
-        font: 18px;
-        margin: 0;
-        padding: 16px 0 0;
-        top: -4px;
-        bottom: 10px;
-        border-top: 1px solid #403f44;
-        border-bottom: 1px solid #403f44;
-      }
-
-      .footer_name {
         font-style: italic;
-        margin-top: 20px;
+        font-family: Georgia, Serif;
+        font-size: 16px;
+        color: #999;
+        font-weight: normal;
       }
 
-      /* Profile Content */
+      .wrapper {
+        height: 100%;
+      }
 
-      .profile_quote {
+      .left {
+        background-color: rgba(0, 0, 0, .025);
+        border-right: 1px solid rgba(0, 0, 0, .05);
+        float: right;
+        height: 100%;
+        margin-left: -1px;
+        min-width: 256px;
+        position: fixed;
+        width: 33.33%;
+
+      }
+
+      .right {
+        float: right;
+        height: 100%;
         position: relative;
+        width: 66.66%;
       }
 
-      .profile_quote p {
-        font-size: 17px;
-        width: 455px;
-      }
 
-      .profile_quote .entypo-quote {
-        color: #3d3a41;
-        font-size: 80px;
-        font-style: normal;
+      .name-hero {
+        background: rgba(0, 0, 0, .001);
+        bottom: 0;
+        height: 640px;
+        left: 0;
+        margin: auto;
         position: absolute;
-        top: -20px;
-        right: 70px;
-        cursor: default;
+        right: 0;
+        top: 0;
+        width: 85%;
       }
 
-      .philosophy_content {
-        margin-top: 20px;
+      .me-img {
+        background: url('./shimi.jpg') no-repeat center center;
+        background-size: 100%;
+        background-position: 0px;
+        border-radius: 100%;
+        height: 150px;
+        margin: 0 auto;
+        position: relative;
+        width: 153px;
       }
 
-      .philosophy_content p {
-        margin: 0;
-        width: 370px;
-        float: left;
+      .name-hero h1 {
+        font-family: Open Sans, sans-serif;
+        font-size: 1.5em;
+        text-align: center;
       }
 
-      .philosophy_content ul {
-        float: left;
-        padding-left: 40px;
+      .name-hero h1 em {
+        color: rgba(0, 0, 0, .3);
+        font-style: normal;
+        font-weight: 700;
       }
-      .text-white {
-        color: white;
+
+      .name-hero p {
+        color: #666;
+        font-family: georgia, serif;
+        font-size: .938em;
+        font-style: italic;
+        line-height: 1.5;
       }
+
+      .name-hero .name-text {
+        margin: 0 auto;
+        width: 85%;
+      }
+
+      .inner {
+        margin: -50px auto;
+        max-width: 975px;
+        padding: 3em;
+      }
+
+      .inner h1 {
+        font-size: 1.8em;
+        font-family: serif;
+        font-weight: bold;
+      }
+
+      .inner p {
+        color: rgba(0, 0, 0, 0.48);
+      }
+
+      .inner p em {
+        color: rgba(0, 0, 0, .75);
+        font-style: normal;
+      }
+
+      .inner section {
+        margin: 35px auto;
+      }
+
+      ul {
+
+        margin-top: -28px;
+        max-width: 570px;
+        padding: 18px;
+      }
+
+      .skill-set li {
+        background: rgba(0, 0, 0, 0.36);
+        border-radius: 5px;
+        color: #FFF;
+        display: inline-block;
+        list-style: none;
+        margin: 15px 15px 0 0;
+        padding: 10px;
+        text-align: justify;
+      }
+
+      @media screen and (max-width: 48em) {
+
+        .right,
+        .left {
+          float: none;
+          position: relative !important;
+          width: 100%;
+          min-height: 500px;
+        }
+
+        .handmade {
+          text-align: center !important;
+          margin-top: 0px !important;
+        }
+        }
+
+        @media screen and (max-width: 75em) {
+          body {
+            font-size: 16px;
+          }
+        }
+
+        @media screen and (max-width: 60em) {
+          body {
+            font-size: 14px;
+          }
+        }
+
+        .clearfix:after {
+          content: " ";
+          /* Older browser do not support empty content */
+          visibility: hidden;
+          display: block;
+          height: 0;
+          clear: both;
+        }
+
+        .handmade {
+          text-align: right;
+          margin-top: 100px;
+        }
+
+        .handmade em {
+          font-family: 'Shadows Into Light', cursive;
+          font-size: 1.25em;
+          margin-left: 5px;
+        }
     </style>
   </head>
 
   <body>
-    <div id="main_container" class="main-cv">
-      <!-- HEADER -->
+    <div class="wrapper clearfix">
+      <div class="left">
+        <div class="name-hero">
+          <div class="me-img"></div>
 
-      <!-- LEFT COL -->
-      <div id="left_col">
-        <div class="profile_frame">
-          <div
-            class="profile_picture"
-            style="background: url('./shimi.jpg') 100% /210px no-repeat;"
-          ></div>
-        </div>
-        <div class="hello_content">
-          <h2 class="bold">Kgaogelo Thorn Manganye</h2>
-          <h2>Profile</h2>
-          <p>
-            I am a self taught web developer who is passionate about technology,
-            a hardworker and a fast-learner.
-          </p>
-          <p>
-            Currently i am responsible for developing and maintaining angular
-            web applications
-          </p>
-          <p>
-            <strong class="purple">ID Number:&nbsp;</strong>9511095502081<br />
-            <strong class="purple">Date Of Birth:&nbsp;</strong>09 November 1995<br />
-            <strong class="purple">Gender:&nbsp;</strong> Male <br />
-            <strong class="purple">Race:&nbsp;</strong>African</br>
-            <strong class="purple">Crimal Offence:&nbsp;</strong>None
-
-          </p>
-        </div>
-        <div class="contact_details_content">
-          <h2>Contact details</h2>
-          <p class="purple">Phone:</p>
-          <p>+27 84 496 5067/64 638 2127</p>
-          <p class="purple">Email:</p>
-          <p>kgaogelothorn@gmail.com</p>
-          <p class="purple">Address:</p>
-          <p>18 Gibsoon Drive West</p>
-          <p>Buccleuch, Sandton</p>
-          <p>2074</p>
+          <div class="name-text">
+            <h1>Kgaogelo Thorn <em>Manganye</em></h1>
+            <p>
+              I am a self-taught web developer who is passionate about
+              technology. a hard worker who is passionate, consistent and a fast
+              learner who is always willing to learn.
+            </p>
+            <p>
+              Currently I am responsible for developing and maintaining angular
+              web applications.
+            </p>
+            <p>
+              <strong class="black">ID Number:&nbsp;</strong>9511095502081<br />
+              <strong class="black">Date Of Birth:&nbsp;</strong>09 November
+              1995<br />
+              <strong class="black">Gender:&nbsp;</strong>Male<br />
+              <strong class="black">Nationality:&nbsp;</strong>African<br />
+              <strong class="black">Criminal Offence:&nbsp;</strong>None
+            </p>
+            <p>
+              <strong class="black">Phone:&nbsp;</strong
+              >0844965067/0646382127<br />
+              <strong class="black">Email:&nbsp;</strong
+              >kgaogelothorn@gmail.com<br />
+              <strong class="black">Address:&nbsp;</strong>18 Gibson Drive
+              West<br />
+              Buccleuch, Sandton<br />
+              2074
+            </p>
+          </div>
         </div>
       </div>
-      <!-- PROFILE CONTENT -->
-      <div id="content_container">
-        <div class="block">
-          <h2>Work Experience</h2>
-          <blockquote class="profile_quote">
-            <strong>2017 - Upto date</strong>
-            <p>
-                <strong>Job Title</strong> <br />
-                 Front-end developer @NEO TECH PTY Ltd
-            </p>
-          </blockquote>
-          <blockquote class="profile_quote">
-            <strong>2015 - up to date</strong>
-            <p>
-                <strong>Job Title</strong> <br />
-                Freelancer
-            </p>
-          </blockquote>
-          <blockquote class="profile_quote">
-            <strong>2014 - 2015</strong>
-            <p>
-              <strong>Job Title</strong> <br />
-              General Worker @Afrit Pty Ltd
-            </p>
-          </blockquote>
-        </div>
-        <div class="block" id="education">
-          <h2>Education</h2>
-          <blockquote class="profile_quote">
-            <strong>2011 - 2013</strong></br>
-              <strong>Reitumetse Senior Secondary</strong> <br />
-              Grade 12 Matric</br>
-              <strong>Subjects</strong>
-              <li>Sepedi (Home language)</li>
-              <li>English (First Additional language)</li>
-              <li> Mathematics</li>
-              <li>Geography</li>
-              <li>Life Sciences</li>
-              <li> Physical Sciences</li>
-              <li> Life Orientation</li>
-          
-          </blockquote>
-          <blockquote class="profile_quote">
-            <strong>2015 - 2017</strong>
-            <br>
-              <strong>Tshwane North TVET College</strong> <br />
-              Electrical Endineering Studies</br>
-              <strong>Subjects</strong>
-              <li>Industrial Electronics</li>
-              <li>Electrical Trade Theory</li>
-              <li>Mathematics</li>
-              <li>Engineering Sciences</li>
-              <li>Electro-Technology</li>
-              <li>Electrotechnics</li>
-              <li>Power Machines</li>
-            </p>
-          </blockquote>
-        </div>
-        <div class="horizontal_line">
-          <div class="line_left"></div>
-          <div class="left_circle"></div>
-          <div class="central_circle"></div>
-          <div class="right_circle"></div>
-          <div class="line_right"></div>
-        </div>
-        <div class="block" id="skills">
-          <h2>Languages</h2>
-          <div class="philosophy_content">
+      <div class="right">
+        <div class="inner">
+          <section>
+            <h1>Employment</h1>
+
+            <h2>
+              NEO TECH PTY Ltd<span
+                >Front-end developer - Mar2017-Upto date</span
+              >
+            </h2>
             <ul>
+              <li>Develop wire frames/PSD designs to functional websites</li>
+              <li>Develop new Angular applications</li>
+              <li>Maintaining existing applications</li>
+              <li>
+                Developing Wordpress, Mailers from PDF to functional websites
+              </li>
+              <li>Designing, coding and modifying websites</li>
+            </ul>
+
+            <h2>NEO TECH PTY Ltd<span>Freelancer - Apr2016-Upto date</span></h2>
+            <ul>
+              <li>Coding and modifying functional appicatins</li>
+              <li>Devloping web applications</li>
+            </ul>
+
+            <h2>Afrit PTY Ltd<span>General Worker - Jun2014-Jun2015</span></h2>
+            <ul>
+              <li>Laser Offloading and Part Sorting</li>
+              <li>Bluepring and drawings scanning</li>
+              <li>Quality control and dispatch</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Education</h1>
+            <h2>Reitumetse Senior Secondary <span>2011-2013</span></h2>
+            <strong>Major:</strong> Grade 12 Matric<br />
+            <h2>Tshwane North TVET College<span>Jun2015-Sep2017</span></h2>
+            <strong>Major:</strong> N6 Electrical Engineeering<br />
+          </section>
+
+          <section>
+            <h1>Languages</h1>
+            <ul class="skill-set">
               <li>HTML5</li>
-              <li>SASS</li>
+              <li>Sass</li>
               <li>CSS3</li>
-              <li>UX</li>
-              <li>Angular2+</li>
+              <li>Ux</li>
+              <li>Angular2</li>
               <li>Node</li>
-              <li>Javascript , jquery</li>
-              <li>Photoshop</li>
+              <li>Javascript,Jquery</li>
               <li>TFS</li>
               <li>Git</li>
               <li>Progressive web apps</li>
-              <li>MS OFFICE</li>
+              <li>Ms Office</li>
             </ul>
-            <div class="clear"></div>
-          </div>
-        </div>
-        <div class="horizontal_line">
-          <div class="line_left"></div>
-          <div class="left_circle"></div>
-          <div class="central_circle"></div>
-          <div class="right_circle"></div>
-          <div class="line_right"></div>
-        </div>
-        <div class="block">
-          <h2>Skills</h2>
-          <div class="philosophy_content">
-            <ul>
-              <li>Good Communication</li>
-              <li>Work well under pressure</li>
-              <li>Problem Solving</li>
-              <li>Teamwork</li>
-              <li>Time Management</li>
-              <li>Client Management</li>
+          </section>
+          <section>
+            <h1>Skills</h1>
+            <ul class="skill-set">
+              <li>Analytical</li>
+              <li>Excellent Communication</li>
+              <li>Able to work under pressure</li>
+              <li>Teamworking</li>
               <li>Technical</li>
+              <li>Adaptability</li>
+              <li>Time Management</li>
             </ul>
-            <div class="clear"></div>
-          </div>
+          </section>
+          <section>
+            <h1>References</h1>
+            <p>Attie Swanepoel | <em>Afrit Pty Ltd. | Manager</em></p>
+            <p>(012) 835-212</p>
+            <p>Neo Tempest | <em>NEO TECH(PTY)LTD. | Manager</em></p>
+            <p>(073) 408-4441</p>
+          </section>
         </div>
-        <div class="horizontal_line">
-          <div class="line_left"></div>
-          <div class="left_circle"></div>
-          <div class="central_circle"></div>
-          <div class="right_circle"></div>
-          <div class="line_right"></div>
-        </div>
-        <div class="last block" id="experience">
-          <h2>References</h2>
-          <table>
-            <tbody>
-              <tr>
-                <td width="300" class="text-white">
-                  <strong> NEO TECH (PTY) Ltd</strong><br />
-                   NEO TEMPEST <br />
-                  073 408 4441
-                </td>
-                <td width="300" class="text-white">
-                  <strong>Manager - Afrit Pty Ltd.</strong> <br />
-                  Mr Attie Swanepoel <br />
-                  012 835 2123
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="clear"></div>
-      <!-- FOOTER -->
-      <div id="footer">
-        <p class="footer_name">
-          Kgaogelo Thorn Manganye CV
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-        </p>
       </div>
     </div>
   </body>
